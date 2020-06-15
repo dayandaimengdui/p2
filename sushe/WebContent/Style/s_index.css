@@ -96,3 +96,12 @@ a:hover{
 .s_foot .red{
     color: #ff0000;
 }
+.s_cen_input{
+    width: 310px;
+    height: 55px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}

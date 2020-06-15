@@ -105,24 +105,26 @@ return re.test(str);
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr style="height: 508px;">
         <td style="height: 508px;" align="center" valign="top">
-          <table width="350" height="201" border="0" cellpadding="0" cellspacing="0">
+          <table style="height: 508px;width: 100%;" border="0" cellpadding="0" cellspacing="0">
             <tr>
-              <td height="72" align="center"><h3>校园宿舍管理系统</h3></td>
+              <td style="height: 125px;width: 100%;" align="center"><h3>校园宿舍管理系统</h3></td>
             </tr>
             <tr>
               <td align="center" valign="top">
                 <form name="form1" action="GoLogin.action" method="post" onSubmit="return mycheck()">
-                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <table style="height: 300px;" width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                      <td height="30" colspan="2" align="center" class="STYLE2"><span style="color:red;">
+                      <td height="10" colspan="1" align="center" class="STYLE2"><span style="color:red;">
                     <%if(request.getAttribute("Msg")!=null){%>
                     <%=request.getAttribute("Msg")%>
                     <%}%>
                   </span></td>
                     </tr>
-                    <tr>
-                      <td height="30" align="right" class="STYLE2">身份：</td>
-                      <td align="left"><select name="Type" id="Type">
+                    <tr style="margin-left: 50px;">
+                      <td style="margin-left: 50px;" height="40" align="right" class="STYLE2">
+                        <span style="width: 38px;height: 30px;margin-left: 15px" class="pull-left input-group-addon glyphicon glyphicon-heart-empty"></span>
+                        <p style="padding-top: 5px; border:1px solid #8c8c8c;border-radius: 15%; margin-top:0px;width: 123px;height: 33px;font-size: 14px; margin-left: 20px">请选择您的身份：</p></td>
+                      <td align="left"><select style="margin-top:-15px;width: 149px;height: 33px;" name="Type" id="Type">
                         <option value="">请选择</option>
                         <option value="系统管理员">系统管理员</option>
                         <option value="楼宇管理员">楼宇管理员</option>
@@ -130,16 +132,20 @@ return re.test(str);
                       </select></td>
                     </tr>
                     <tr>
-                      <td width="37%" height="30" align="right" class="STYLE2">用户名：</td>
-                      <td width="300" align="left"><input type="text" name="Username" id="Username" class="text1" /></td>
+                      <td width="37%" height="30" align="right" class="STYLE2">
+                        <span style="width: 38px;height: 30px;margin-left: 15px" class="pull-left input-group-addon glyphicon glyphicon-user"></span>
+                        <p style="padding-top: 5px; border:1px solid #8c8c8c;border-radius: 15%; margin-top:0px;width: 123px;height: 33px;font-size: 14px; margin-left: 20px">请选择您的用户名：</p></td>
+                      <td width="300" align="left"><input style="margin-top:-15px;width: 149px;height: 33px;" type="text" name="Username" id="Username" class="text1" /></td>
                     </tr>
                     <tr>
-                      <td height="30" align="right" class="STYLE2">密码：</td>
-                      <td align="left"><input type="password" name="Password" id="Password" class="text1" /></td>
+                      <td height="30" align="right" class="STYLE2">
+                        <span style="width: 38px;height: 30px;margin-left: 15px" class="pull-left input-group-addon glyphicon glyphicon-user"></span>
+                        <p style="padding-top: 5px; border:1px solid #8c8c8c;border-radius: 15%; margin-top:0px;width: 123px;height: 33px;font-size: 14px; margin-left: 20px">请选择您的密码：</p></td>
+                      <td align="left"><input style="margin-top:-15px;width: 149px;height: 33px;" type="password" name="Password" id="Password" class="text1" /></td>
                     </tr>
                     <tr>
                       <td height="30" colspan="2" align="center"><label>
-                        <input type="submit" name="button" id="button" value="登录">
+                        <input type="submit" class="btn btn-danger s_cen_input" name="button" id="button" value="登录">
                       </label></td>
                     </tr>
                   </table>
