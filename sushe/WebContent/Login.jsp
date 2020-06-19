@@ -150,7 +150,6 @@ return re.test(str);
                     </tr>
                   </table>
                 </form>
-
               </td>
             </tr>
           </table></td>
