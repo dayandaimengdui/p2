@@ -10,6 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>校园宿舍管理系统</title>
     <base href="<%=basePath%>">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="Style/s_index.css">
     <link href="Style/Style.css" rel="stylesheet" type="text/css" />
 </head>
 <script language="JavaScript">
@@ -48,85 +49,103 @@ return re.test(str);
    
 </script>
 <body>
-<center>
-  <table width="900" border="0" cellspacing="0" cellpadding="0">
-    <tr>
-      <td height="60" bgcolor="#E6F5FF" style="color:#06F; font-size:19px; font-weight:bolder; padding-left:50px;">校园宿舍管理系统</td>
-    </tr>
-    <tr>
-      <td height="30" background="Images/MenuBg.jpg">&nbsp;</td>
-    </tr>
-    <tr>
-      <td height="500" align="center" valign="top"><table width="900" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td width="191" height="500" align="center" valign="top" background="Images/leftbg.jpg">
-          <%@ include file="Left.jsp"%>
-          </td>
-          <td width="709" align="center" valign="top" bgcolor="#F6F9FE"><table width="709" border="0" cellspacing="0" cellpadding="0">
-            <tr>
-              <td height="30" background="Images/mainMenuBg.jpg" style="padding-left:25px;">修改楼宇管理员</td>
-            </tr>
-            <tr>
-              <td height="470" align="center" valign="top" bgcolor="#F6F9FE"><form name="form1" method="post" action="TeacherUpdateSave.action" onSubmit="return mycheck()" >
-                <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                  <tr>
-                    <td width="33%" height="30" align="right">&nbsp;</td>
-                    <td width="67%"><input name="Teacher_ID" type="text" class="noshow" id="Teacher_ID" value="<s:property value='cnbean.Teacher_ID'/>"></td>
-                  </tr>
-                  <tr>
-                    <td height="30" align="right"><span style="color:red;">*</span>用户名：</td>
-                    <td><input name="Teacher_Username" type="text" class="text2" id="Teacher_Username" value="<s:property value='cnbean.Teacher_Username'/>"></td>
-                  </tr>
-                  <tr>
-                    <td height="30" align="right">密码：</td>
-                    <td><input name="Teacher_Password" type="password" class="text2" id="Teacher_Password">
-                      <span style="color:#F60">不修改则不填写</span></td>
-                  </tr>
-                  <tr>
-                    <td height="30" align="right">重复密码：</td>
-                    <td><input name="Teacher_Password2" type="password" class="text2" id="Teacher_Password2">
-                      <span style="color:#F60">不修改则不填写</span></td>
-                  </tr>
-                  <tr>
-                    <td height="30" align="right"><span style="color:red;">*</span>姓名：</td>
-                    <td><input name="Teacher_Name" type="text" class="text2" id="Teacher_Name" value="<s:property value='cnbean.Teacher_Name'/>"></td>
-                  </tr>
-                  <tr>
-                    <td height="30" align="right"><span style="color:red;">*</span>性别：</td>
-                    <td><select name="Teacher_Sex" id="Teacher_Sex">
-                      <option value="">请选择</option>
-                      <option value="男" 
-                      <s:if test='cnbean.Teacher_Sex=="男"'>selected</s:if>
-                      >男
-                      </option>
-                      <option value="女" 
-                      <s:if test='cnbean.Teacher_Sex=="女"'>selected</s:if>
-                      >女
-                      </option>
-                    </select></td>
-                  </tr>
-                  <tr>
-                    <td height="30" align="right"><span style="color:red;">*</span>联系电话：</td>
-                    <td><input name="Teacher_Tel" type="text" class="text2" id="Teacher_Tel" value="<s:property value='cnbean.Teacher_Tel'/>"></td>
-                  </tr>
-                  <tr>
-                    <td height="30">&nbsp;</td>
-                    <td><input type="submit" name="button" id="button" value="修改楼宇管理员">
-                      &nbsp;&nbsp;
-                      <input type="button" name="button2" id="button2" value="返回上页" onClick="javascript:history.back(-1);"></td>
-                  </tr>
-                </table>
-              </form></td>
-            </tr>
-          </table></td>
-        </tr>
-      </table></td>
-    </tr>
-    <tr>
-      <td height="35" background="Images/bootBg.jpg">&nbsp;</td>
-    </tr>
-  </table>
+<div class="s_top">
+  <div class="s_top_left">
+    <p style="background:url(Images/login.jpg) no-repeat; width: 210px;height:88px;float: left;background-size:210px 86px; ">
+      <a href=""></a>
+    </p>
+    <a class="s_top_img" href="">
+      <img src="Images/top.png" style="height:80px;width:240px;" alt="">
+    </a>
+  </div>
+  <div class="s_top_right">
+    欢迎来到西北师范大学！
+    <a style="color:#0066cc;" href="" class="s_top_a1">免费注册</a>
+    <a style="color:#666;" href="" class="s_top_a2">帮助中心</a>
+  </div>
+</div>
 
-</center>
+
+<div class="s_index_cen">
+  <center>
+    <table class="s_index_cen" width="900" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td style="padding-top: 50px;" height="500" align="center" valign="top"><table width="900" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="191" height="500" align="center" valign="top" background="Images/leftbg.jpg">
+              <%@ include file="Left.jsp"%>
+            </td>
+            <td width="709" align="center" valign="top" bgcolor="#F6F9FE"><table width="709" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="30" background="Images/mainMenuBg.jpg" style="padding-left:25px;">修改楼宇管理员</td>
+              </tr>
+              <tr>
+                <td height="470" align="center" valign="top" bgcolor="#F6F9FE"><form name="form1" method="post" action="TeacherUpdateSave.action" onSubmit="return mycheck()" >
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="33%" height="30" align="right">&nbsp;</td>
+                      <td width="67%"><input name="Teacher_ID" type="text" class="noshow" id="Teacher_ID" value="<s:property value='cnbean.Teacher_ID'/>"></td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="right"><span style="color:red;">*</span>用户名：</td>
+                      <td><input name="Teacher_Username" type="text" class="text2" id="Teacher_Username" value="<s:property value='cnbean.Teacher_Username'/>"></td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="right">密码：</td>
+                      <td><input name="Teacher_Password" type="password" class="text2" id="Teacher_Password">
+                        <span style="color:#F60">不修改则不填写</span></td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="right">重复密码：</td>
+                      <td><input name="Teacher_Password2" type="password" class="text2" id="Teacher_Password2">
+                        <span style="color:#F60">不修改则不填写</span></td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="right"><span style="color:red;">*</span>姓名：</td>
+                      <td><input name="Teacher_Name" type="text" class="text2" id="Teacher_Name" value="<s:property value='cnbean.Teacher_Name'/>"></td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="right"><span style="color:red;">*</span>性别：</td>
+                      <td><select name="Teacher_Sex" id="Teacher_Sex">
+                        <option value="">请选择</option>
+                        <option value="男"
+                                <s:if test='cnbean.Teacher_Sex=="男"'>selected</s:if>
+                        >男
+                        </option>
+                        <option value="女"
+                                <s:if test='cnbean.Teacher_Sex=="女"'>selected</s:if>
+                        >女
+                        </option>
+                      </select></td>
+                    </tr>
+                    <tr>
+                      <td height="30" align="right"><span style="color:red;">*</span>联系电话：</td>
+                      <td><input name="Teacher_Tel" type="text" class="text2" id="Teacher_Tel" value="<s:property value='cnbean.Teacher_Tel'/>"></td>
+                    </tr>
+                    <tr>
+                      <td height="30">&nbsp;</td>
+                      <td><input type="submit" name="button" id="button" value="修改楼宇管理员">
+                        &nbsp;&nbsp;
+                        <input type="button" name="button2" id="button2" value="返回上页" onClick="javascript:history.back(-1);"></td>
+                    </tr>
+                  </table>
+                </form></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+
+  </center>
+</div>
+
+
+<div class="s_footer" style="height: 90px;">
+  <div class="s_foot">
+    <p>© &nbsp;西北师范大学&nbsp; 2020 <a href="https://www.nwnu.edu.cn/">nwnu.edu.cn.com</a>  All &nbsp;Rights Reserved&nbsp;&nbsp;<a target="_blank" href="#">京ICP证110141号</a>&nbsp;&nbsp;京公网安备1101050188221</p>
+    <p class="red">版权所有：大眼呆萌&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;github地址：<a href="https://github.com/dayandaimeng/p1">github.com/dayandaimeng</a></p>
+  </div>
+</div>
 </body>
 </html>
